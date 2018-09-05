@@ -1,5 +1,5 @@
 {
-  "name": "vue-todo",
+  "name": "vue-todo-app",
   "description": "A Vue.js project",
   "version": "1.0.0",
   "author": "신창환 <tprp5950@gmail.com>",
@@ -10,7 +10,8 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "vue": "^2.5.11"
+    "vue": "^2.5.11",
+    "vuex": "^3.0.1"
   },
   "browserslist": [
     "> 1%",

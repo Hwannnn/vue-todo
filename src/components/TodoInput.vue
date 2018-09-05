@@ -24,6 +24,7 @@
 </template>
 
 <script>
+  import { mapMutations } from "vuex";
   import Modal from "./common/Modal.vue";
 
   const EMPTY = "";
@@ -36,12 +37,14 @@
       }
     },
     methods: {
+      ...mapMutations(["addTodoItem"]),
+
       addTodo() {
         if (this.newTodo === EMPTY) {
           this.showModal = !this.showModal;
 
         } else {
-          this.$emit("addTodo", this.newTodo);
+          this.addTodoItem(this.newTodo);
           this.clearInput();
         }
       },
